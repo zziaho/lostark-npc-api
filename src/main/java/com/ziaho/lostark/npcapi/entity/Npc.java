@@ -1,5 +1,6 @@
 package com.ziaho.lostark.npcapi.entity;
 
+import com.ziaho.lostark.npcapi.dto.NpcDto;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -49,5 +50,7 @@ public class Npc {
 	)
 	private Set<Affiliation> affiliations = new HashSet<>();
 
+	@Column
+	private String birthMmdd; // MM.dd
 
 }
