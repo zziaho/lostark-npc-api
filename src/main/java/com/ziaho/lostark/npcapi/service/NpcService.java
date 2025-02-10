@@ -27,4 +27,13 @@ public class NpcService {
 		return npcDtoList;
 	}
 
+	/**
+	 * NPC명으로 특정 NPC 상세 조회하는 메소드
+	 */
+	public NpcDto getNpcByNpcName(String npcName) {
+		Npc npc = npcRepository.findByNpcName(npcName);
+
+		return new NpcDto(npc);
+	}
+
 }

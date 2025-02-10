@@ -15,4 +15,9 @@ public interface NpcRepository extends JpaRepository<Npc, Long> {
 	 */
 	List<Npc> findAll();
 
+	/**
+	 * NPC명으로 특정 NPC 상세 조회하는 메소드
+	 */
+	Npc findByNpcName(String npcName);
+
 }
